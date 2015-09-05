@@ -1,0 +1,71 @@
+<div class="module inbox-view">
+    <leftnav></leftnav>
+</div>
+<div class="module directive" style="margin-left:10;padding:0">
+    <h1> User List </h1>
+    <br>
+    
+    <table class="table" style="width:80%;">
+        <tbody>
+            <tr>
+                <td width="35%">
+                    <a href="#/users/$$" class="btn btn-success btn-sm">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Add User</span>
+                    </a>
+                </td>
+                <td width="65%">
+                    <div class="input-group" style="width:50%;">
+                        <input type="text" class="form-control" placeholder="Search Names" name="searchname" id="searchname">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="button" ng-click="search(searchText)"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <div class="container">
+            <div class="col-sm-6 col-sm-offset-2">
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+            </div>
+        </div>
+    </div>
+    <img ng-if="dataLoading" src="../css/ajax-loader.gif" />
+    <table class="table table-bordered" style="width:80%;">
+        <thead>
+            <tr>
+                <th>
+                    <a href="#/users" ng-click="orderByField='firstName'; reverseSort = !reverseSort">
+                        First Name <span ng-show="orderByField == 'firstName'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                    </a>
+                </th>
+                <th>
+                    <a href="#/users" ng-click="orderByField='lastName'; reverseSort = !reverseSort">
+                        Last Name <span ng-show="orderByField == 'lastName'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                    </a>
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Address
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="dat in data|orderBy:orderByField:reverseSort">
+                <td><a href="#/users/{{dat._id}}">{{dat.firstName}}</a></td>
+                <td><a href="#/users/{{dat._id}}">{{dat.lastName}}</a></td>
+                <td>{{dat.phone}}</td>
+                <td>{{dat.email}}</td>
+                <td>{{dat.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    

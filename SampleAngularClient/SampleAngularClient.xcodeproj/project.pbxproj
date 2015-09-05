@@ -1,0 +1,142 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		DC09E7141B8F5B44008AC282 /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = app.js; path = ../app.js; sourceTree = "<group>"; };
+		DC1A37981B94264A0024C24E /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		DC1A379A1B9429300024C24E /* leftNavDrctv.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = leftNavDrctv.js; path = ../directives/leftNavDrctv.js; sourceTree = "<group>"; };
+		DC1A379B1B942C420024C24E /* nav.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = nav.html; sourceTree = "<group>"; };
+		DC1A379E1B942F010024C24E /* simple-sidebar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "simple-sidebar.css"; sourceTree = "<group>"; };
+		DC77F3E71B96C3E2009C92E3 /* flash.service.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = flash.service.js; path = ../factories/flash.service.js; sourceTree = "<group>"; };
+		DC96F5AF1B91809000C3C335 /* HomeCtrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = HomeCtrl.js; sourceTree = "<group>"; };
+		DC96F5B01B91809000C3C335 /* UsersCtrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = UsersCtrl.js; sourceTree = "<group>"; };
+		DC96F5B11B91809000C3C335 /* UserDetailsCtrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = UserDetailsCtrl.js; sourceTree = "<group>"; };
+		DC96F5B21B91841300C3C335 /* UserManagementFactory.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = UserManagementFactory.js; path = ../factories/UserManagementFactory.js; sourceTree = "<group>"; };
+		DC96F5B71B91AEB300C3C335 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = ../index.html; sourceTree = "<group>"; };
+		DC96F5B81B91B3AA00C3C335 /* home.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
+		DC96F5B91B91B3AA00C3C335 /* userDetails.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = userDetails.html; sourceTree = "<group>"; };
+		DC96F5BA1B91B3AA00C3C335 /* users.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = users.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		DC09E70C1B8F59D0008AC282 = {
+			isa = PBXGroup;
+			children = (
+				DC09E7141B8F5B44008AC282 /* app.js */,
+				DC96F5B71B91AEB300C3C335 /* index.html */,
+				DC09E7191B8F5CC8008AC282 /* factories */,
+				DC09E7161B8F5CC8008AC282 /* controllers */,
+				DC1A37991B9428F50024C24E /* directives */,
+				DC09E71A1B8F5CC8008AC282 /* views */,
+				DC1A37971B94264A0024C24E /* css */,
+			);
+			sourceTree = "<group>";
+		};
+		DC09E7161B8F5CC8008AC282 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC96F5AF1B91809000C3C335 /* HomeCtrl.js */,
+				DC96F5B01B91809000C3C335 /* UsersCtrl.js */,
+				DC96F5B11B91809000C3C335 /* UserDetailsCtrl.js */,
+			);
+			name = controllers;
+			path = ../controllers;
+			sourceTree = "<group>";
+		};
+		DC09E7191B8F5CC8008AC282 /* factories */ = {
+			isa = PBXGroup;
+			children = (
+				DC77F3E71B96C3E2009C92E3 /* flash.service.js */,
+				DC96F5B21B91841300C3C335 /* UserManagementFactory.js */,
+			);
+			name = factories;
+			path = ../services;
+			sourceTree = "<group>";
+		};
+		DC09E71A1B8F5CC8008AC282 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				DC96F5B81B91B3AA00C3C335 /* home.html */,
+				DC96F5B91B91B3AA00C3C335 /* userDetails.html */,
+				DC96F5BA1B91B3AA00C3C335 /* users.html */,
+				DC1A379B1B942C420024C24E /* nav.html */,
+			);
+			name = views;
+			path = ../views;
+			sourceTree = "<group>";
+		};
+		DC1A37971B94264A0024C24E /* css */ = {
+			isa = PBXGroup;
+			children = (
+				DC1A37981B94264A0024C24E /* style.css */,
+				DC1A379E1B942F010024C24E /* simple-sidebar.css */,
+			);
+			name = css;
+			path = ../css;
+			sourceTree = "<group>";
+		};
+		DC1A37991B9428F50024C24E /* directives */ = {
+			isa = PBXGroup;
+			children = (
+				DC1A379A1B9429300024C24E /* leftNavDrctv.js */,
+			);
+			name = directives;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		DC09E70D1B8F59D0008AC282 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = DC09E7101B8F59D0008AC282 /* Build configuration list for PBXProject "SampleAngularClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DC09E70C1B8F59D0008AC282;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		DC09E7111B8F59D0008AC282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		DC09E7121B8F59D0008AC282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC09E7101B8F59D0008AC282 /* Build configuration list for PBXProject "SampleAngularClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC09E7111B8F59D0008AC282 /* Debug */,
+				DC09E7121B8F59D0008AC282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC09E70D1B8F59D0008AC282 /* Project object */;
+}

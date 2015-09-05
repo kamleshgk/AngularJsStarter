@@ -1,0 +1,49 @@
+<html ng-app="HigherOrderApp">
+    <head>
+        <title>User Management!</title>
+        <link href="css/style.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+            
+        <style>
+            [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                  display: none !important;
+            }
+        </style>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
+            rel='stylesheet' type='text/css'>
+                
+        <!-- Vendor libraries -->
+        <script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="lib/angular.js"></script>
+        <script type="text/javascript" src="lib/angular-sanitize.js"></script>
+        <script type="text/javascript" src="lib/angular-route.js"></script>
+        
+        <!-- Bootstrap Core JavaScript -->
+        <script src="lib/bootstrap.min.js"></script>
+        
+        <!-- App Code Files -->
+        <script type="text/javascript" src="app.js"></script>
+        
+        <script src="controllers/HomeCtrl.js"></script>
+        <script src="controllers/UsersCtrl.js"></script>
+        <script src="controllers/UserDetailsCtrl.js"></script>
+        <script src="factories/UserManagementFactory.js"></script>
+        <script src="factories/flash.service.js"></script>        
+        <script src="directives/leftNavDrctv.js"></script>
+    
+    </head>
+    <body style='background-color: #F6F5F3;'>
+        <header class="header" role="banner">
+            <div class="header__text">
+                <p>User Management by <a href="http://higherorder.in">HigherOrder</a></p>
+            </div>
+        </header>
+        <main class="main" role="main">
+            <div ng-view class="flex"></div>
+        </main>
+    </body>
+</html>
