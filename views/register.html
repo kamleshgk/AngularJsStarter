@@ -1,0 +1,56 @@
+<div class="module inbox-view">
+</div>
+
+<div class="module directive" style="margin-left:10;padding:0">
+    <h2 align='center'> Register </h2>
+    <br><br>
+    <div>
+        <div class="container">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+        <form name="form" ng-submit="registerNewUser()" role="form">
+            <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+                <label for="firstName">First name</label>
+                <input type="text" name="firstName" id="firstName" class="form-control" ng-model="data.firstName" required />
+                <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+                <label for="lastName">Last name</label>
+                <input type="text" name="lastName" id="lastName" class="form-control" ng-model="data.lastName" required />
+                <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control" ng-model="data.email" required />
+                <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email is required</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" ng-model="data.password" required />
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': form.phone.$dirty && form.phone.$error.required }">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" class="form-control" ng-model="data.phone" required />
+                <span ng-show="form.phone.$dirty && form.phone.$error.required" class="help-block">Password is required</span>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea rows="4" cols="50" name="address" id="address" class="form-control" ng-model="data.address">
+                   
+                </textarea>
+            </div>
+            
+            <div class="form-actions" style="margin: 20px;">
+                <!--<button type="submit" ng-disabled="form.$pristine || form.$invalid || {{dataLoading}}" class="btn btn-primary">{{buttonLabel}}</button> -->
+                <button type="submit" class="btn btn-primary">Register</button>
+                <img ng-if="dataLoading" src="../css/ajax-loader.gif" />
+                <a href="#/Login" class="btn btn-link" style="margin-right: 20px">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div

@@ -24,6 +24,8 @@
 		DC96F5B81B91B3AA00C3C335 /* home.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
 		DC96F5B91B91B3AA00C3C335 /* userDetails.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = userDetails.html; sourceTree = "<group>"; };
 		DC96F5BA1B91B3AA00C3C335 /* users.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = users.html; sourceTree = "<group>"; };
+		DCB608681BA027CB00ECE0F7 /* RegisterCtrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = RegisterCtrl.js; sourceTree = "<group>"; };
+		DCB608691BA027F100ECE0F7 /* register.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = register.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -47,6 +49,7 @@
 				DC96F5AF1B91809000C3C335 /* HomeCtrl.js */,
 				DC96F5B01B91809000C3C335 /* UsersCtrl.js */,
 				DC96F5B11B91809000C3C335 /* UserDetailsCtrl.js */,
+				DCB608681BA027CB00ECE0F7 /* RegisterCtrl.js */,
 			);
 			name = controllers;
 			path = ../controllers;
@@ -71,6 +74,7 @@
 				DC96F5B91B91B3AA00C3C335 /* userDetails.html */,
 				DC96F5BA1B91B3AA00C3C335 /* users.html */,
 				DC1A379B1B942C420024C24E /* nav.html */,
+				DCB608691BA027F100ECE0F7 /* register.html */,
 			);
 			name = views;
 			path = ../views;

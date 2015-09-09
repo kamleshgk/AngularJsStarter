@@ -25,6 +25,11 @@ angular.module('HigherOrderApp', [
         controller: 'LoginController',
         controllerAs: 'login'
         })
+  .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterController',
+        controllerAs: 'register'
+        })
   .when('/users', {
         templateUrl: 'views/users.html',
         controller: 'UsersCtrl',
@@ -51,7 +56,7 @@ angular.module('HigherOrderApp', [
    
     $rootScope.$on('$locationChangeStart', function (event, next, current) {
        // redirect to login page if not logged in and trying to access a restricted page
-       var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
+       var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
        var loggedIn = $rootScope.globals.currentUser;
        if (restrictedPage && !loggedIn) {
             $location.path('/login');
