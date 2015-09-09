@@ -42,6 +42,5 @@ angular.module('HigherOrderApp')
                       FlashService.Error('Errror getting users. Please try again.');
                       $scope.dataLoading = false;
                   }
-              });
-            
-  });
+            });
+});

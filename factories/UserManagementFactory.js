@@ -120,5 +120,28 @@ angular.module('HigherOrderApp')
                 });
    };
            
-    return exports;
+           
+   exports.loginUser = function (serverDomainAndPort, loginData) {
+   return $http.post('http://localhost:1337/login', loginData).then(
+                function(response) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                    var success = { success: true, message: response.data };
+                    console.log('handleSuccess!', success);
+                    return success;
+                },
+                function(response) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                    var err;
+                    if (response.data)
+                    err = { success: false, message: response.data.message };
+                    else
+                    err = { success: false, message: "Server not responding. Try again." };
+                    console.log('handleError!', err);
+                    return err;
+                });
+   };
+           
+   return exports;
 });

@@ -12,6 +12,9 @@
 		DC1A379A1B9429300024C24E /* leftNavDrctv.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = leftNavDrctv.js; path = ../directives/leftNavDrctv.js; sourceTree = "<group>"; };
 		DC1A379B1B942C420024C24E /* nav.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = nav.html; sourceTree = "<group>"; };
 		DC1A379E1B942F010024C24E /* simple-sidebar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "simple-sidebar.css"; sourceTree = "<group>"; };
+		DC4000AE1B9EF1B1001C0469 /* AuthFactory.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = AuthFactory.js; path = ../factories/AuthFactory.js; sourceTree = "<group>"; };
+		DC4000AF1B9EFB58001C0469 /* LoginCtrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = LoginCtrl.js; sourceTree = "<group>"; };
+		DC4000B01B9EFB67001C0469 /* login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
 		DC77F3E71B96C3E2009C92E3 /* flash.service.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = flash.service.js; path = ../factories/flash.service.js; sourceTree = "<group>"; };
 		DC96F5AF1B91809000C3C335 /* HomeCtrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = HomeCtrl.js; sourceTree = "<group>"; };
 		DC96F5B01B91809000C3C335 /* UsersCtrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = UsersCtrl.js; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		DC09E7161B8F5CC8008AC282 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC4000AF1B9EFB58001C0469 /* LoginCtrl.js */,
 				DC96F5AF1B91809000C3C335 /* HomeCtrl.js */,
 				DC96F5B01B91809000C3C335 /* UsersCtrl.js */,
 				DC96F5B11B91809000C3C335 /* UserDetailsCtrl.js */,
@@ -51,6 +55,7 @@
 		DC09E7191B8F5CC8008AC282 /* factories */ = {
 			isa = PBXGroup;
 			children = (
+				DC4000AE1B9EF1B1001C0469 /* AuthFactory.js */,
 				DC77F3E71B96C3E2009C92E3 /* flash.service.js */,
 				DC96F5B21B91841300C3C335 /* UserManagementFactory.js */,
 			);
@@ -61,6 +66,7 @@
 		DC09E71A1B8F5CC8008AC282 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				DC4000B01B9EFB67001C0469 /* login.html */,
 				DC96F5B81B91B3AA00C3C335 /* home.html */,
 				DC96F5B91B91B3AA00C3C335 /* userDetails.html */,
 				DC96F5BA1B91B3AA00C3C335 /* users.html */,

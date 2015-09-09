@@ -3,11 +3,11 @@
  */
 angular.module('HigherOrderApp')
   .controller('HomeCtrl',
-    function HomeCtrl ($scope, UserManagementFactory)
+    function HomeCtrl ($scope, UserManagementFactory, $rootScope)
     {
       'use strict';
               
-      $scope.users = "This is your Home Page.  Add our dashboard!";
+      $scope.user = $rootScope.globals.currentUser.user;
       
 
     });

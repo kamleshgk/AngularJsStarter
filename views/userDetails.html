@@ -24,20 +24,30 @@
                 <input type="text" name="lastName" id="lastName" class="form-control" ng-model="data.lastName" required />
                 <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
             </div>
+            <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control" ng-model="data.email" required />
+                <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email is required</span>
+            </div>
+            <div ng-if="showPassword" class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" ng-model="data.password" required />
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+            </div>
             <div class="form-group" ng-class="{ 'has-error': form.phone.$dirty && form.phone.$error.required }">
                 <label for="phone">Phone</label>
                 <input type="text" name="phone" id="phone" class="form-control" ng-model="data.phone" required />
-                <span ng-show="form.phone.$dirty && form.phone.$error.required" class="help-block">Phone is required</span>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" class="form-control" ng-model="data.email" />
+                <span ng-show="form.phone.$dirty && form.phone.$error.required" class="help-block">Password is required</span>
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
                 <textarea rows="4" cols="50" name="address" id="address" class="form-control" ng-model="data.address">
                    
                 </textarea>
+            </div>
+            <div class="form-group">
+                <label for="admin">Is Admin</label>
+                <input type="checkbox" name="admin" value="data.admin" ng-model="data.admin" {{admincheck}}>
             </div>
             
             <div class="form-actions" style="margin: 20px;">

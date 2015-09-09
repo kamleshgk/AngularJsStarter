@@ -11,6 +11,7 @@ angular.module('HigherOrderApp')
        var user;
        if (userId != '$$')
        {
+          $scope.showPassword = false;
           $scope.showDelete = true;
           console.log('gone update');
           $scope.dataLoading = true;
@@ -22,6 +23,10 @@ angular.module('HigherOrderApp')
                       console.log('The request was successful!', response.message);
                       $scope.dataLoading = false;
                       $scope.data = response.message;
+                      if ($scope.data)
+                        $scope.admincheck = 'checked';
+                      else
+                        $scope.admincheck = '';                  
                   }
                   else {
                       console.log('Gone UserManagementFactory Fail!', response);
@@ -32,6 +37,8 @@ angular.module('HigherOrderApp')
        }
        else
        {
+            $scope.admincheck = '';
+            $scope.showPassword = true;
             $scope.showDelete = false;
             $scope.dataLoading = false;
             console.log('gone create');
