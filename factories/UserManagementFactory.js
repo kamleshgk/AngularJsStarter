@@ -7,7 +7,7 @@ angular.module('HigherOrderApp')
     var exports = {};
 
     exports.getUserDetails = function (serverDomainAndPort, userId) {
-           return $http.get('http://localhost:1337/user/' + userId).then(
+           return $http.get(serverDomainAndPort + '/user/' + userId).then(
                  function(response) {
                      // this callback will be called asynchronously
                      // when the response is available
@@ -30,7 +30,7 @@ angular.module('HigherOrderApp')
 
     exports.getUsers = function (serverDomainAndPort) {
            
-        return $http.get('http://localhost:1337/list').then(
+        return $http.get(serverDomainAndPort + '/list').then(
                 function(response) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -52,7 +52,7 @@ angular.module('HigherOrderApp')
     };
            
     exports.createUser = function (serverDomainAndPort, user) {
-       return $http.post('http://localhost:1337/create', user).then(
+       return $http.post(serverDomainAndPort + '/create', user).then(
                 function(response) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -74,7 +74,7 @@ angular.module('HigherOrderApp')
     };
            
     exports.updateUser = function (serverDomainAndPort, user) {
-       return $http.post('http://localhost:1337/update', user).then(
+       return $http.post(serverDomainAndPort + '/update', user).then(
                 function(response) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -99,7 +99,7 @@ angular.module('HigherOrderApp')
     exports.deleteUser = function (serverDomainAndPort, userId) {
     var userData = { 'id':userId };
     console.log(userData);
-    return $http.post('http://localhost:1337/destroy', userData).then(
+    return $http.post(serverDomainAndPort + '/destroy', userData).then(
                 function(response) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -122,7 +122,7 @@ angular.module('HigherOrderApp')
            
            
    exports.loginUser = function (serverDomainAndPort, loginData) {
-   return $http.post('http://localhost:1337/login', loginData).then(
+   return $http.post(serverDomainAndPort + '/login', loginData).then(
                 function(response) {
                     // this callback will be called asynchronously
                     // when the response is available

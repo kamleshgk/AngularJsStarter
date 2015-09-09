@@ -9,7 +9,10 @@ angular.module('HigherOrderApp', [
     'ngSanitize',
     'ngCookies'
 ])
-.constant('serverDomainAndPort','http://localhost:1997')
+.constant('myConfig', {                 //configure your server 
+          'url': 'http://localhost',
+          'port': '1337'
+          })
 .config(function ( $routeProvider ) {
 
   'use strict';

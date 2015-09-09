@@ -2,7 +2,7 @@
  * Controller: InboxCtrl
  */
 angular.module('HigherOrderApp')
-.controller('UsersCtrl', function UsersCtrl ($scope, UserManagementFactory, FlashService) {
+.controller('UsersCtrl', function UsersCtrl ($scope, myConfig, UserManagementFactory, FlashService) {
       'use strict';
             $scope.dataLoading = true;
             $scope.searchText = '';
@@ -13,7 +13,7 @@ angular.module('HigherOrderApp')
                 console.log('deleting user  ' + id );
                 $scope.dataLoading = true;
                 
-                UserManagementFactory.deleteUser('3',id)
+                UserManagementFactory.deleteUser(myConfig.url + ':' + myConfig.port,id)
                 .then(function (response) {
                       if (response.success) {
                       $scope.dataLoading = false;
@@ -28,7 +28,7 @@ angular.module('HigherOrderApp')
                 }
             }
             
-            UserManagementFactory.getUsers('3')
+            UserManagementFactory.getUsers(myConfig.url + ':' + myConfig.port)
             .then(function (response) {
                   if (response.success) {
                       console.log('The request was successful!', response.message);

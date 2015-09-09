@@ -2,7 +2,7 @@
  * Controller: InboxCtrl
  */
 angular.module('HigherOrderApp')
-.controller('LoginController', function LoginController ($scope, UserManagementFactory, $location, AuthenticationService, FlashService) {
+.controller('LoginController', function LoginController ($scope, UserManagementFactory, myConfig, $location, AuthenticationService, FlashService) {
 
     'use strict';
 
@@ -18,7 +18,7 @@ angular.module('HigherOrderApp')
         $scope.dataLoading = true;
         var loginData = { email: $scope.username, password: $scope.password };
         
-        UserManagementFactory.loginUser('3',loginData)
+        UserManagementFactory.loginUser(myConfig.url + ':' + myConfig.port ,loginData)
         .then(function (response) {
               if (response.success) {
                  $scope.dataLoading = false;

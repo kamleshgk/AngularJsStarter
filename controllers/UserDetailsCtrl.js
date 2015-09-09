@@ -3,7 +3,7 @@
  */
 angular.module('HigherOrderApp')
 .controller('UserDetailsCtrl',
-     function UserDetailsCtrl ($scope, $routeParams, $location, UserManagementFactory, FlashService ) {
+     function UserDetailsCtrl ($scope, $routeParams, $location, myConfig, UserManagementFactory, FlashService ) {
       'use strict';
 
        var userId = $routeParams.id;
@@ -17,7 +17,7 @@ angular.module('HigherOrderApp')
           $scope.dataLoading = true;
           $scope.buttonLabel = 'Update';
           //Get the user details
-          UserManagementFactory.getUserDetails('3', userId)
+          UserManagementFactory.getUserDetails(myConfig.url + ':' + myConfig.port, userId)
             .then(function (response) {
                   if (response.success) {
                       console.log('The request was successful!', response.message);
@@ -67,7 +67,7 @@ angular.module('HigherOrderApp')
                 console.log('deleting user  ' + id );
                 $scope.dataLoading = true;
                 
-                UserManagementFactory.deleteUser('3',id)
+                UserManagementFactory.deleteUser(myConfig.url + ':' + myConfig.port,id)
                 .then(function (response) {
                       if (response.success) {
                          $scope.dataLoading = false;
@@ -86,7 +86,7 @@ angular.module('HigherOrderApp')
               $scope.dataLoading = true;
             
               var user = $scope.data;
-              UserManagementFactory.createUser('3',user)
+              UserManagementFactory.createUser(myConfig.url + ':' + myConfig.port, user)
                 .then(function (response) {
                       if (response.success) {
                         $scope.dataLoading = false;
@@ -105,7 +105,7 @@ angular.module('HigherOrderApp')
             $scope.dataLoading = true;
             
             var user = $scope.data;
-            UserManagementFactory.updateUser('3',user)
+            UserManagementFactory.updateUser(myConfig.url + ':' + myConfig.port, user)
             .then(function (response) {
                   if (response.success) {
                     $scope.dataLoading = false;

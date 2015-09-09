@@ -2,7 +2,7 @@
  * Controller: RegisterController
  */
 angular.module('HigherOrderApp')
-.controller('RegisterController', function RegisterController ($scope, $location, UserManagementFactory, FlashService) {
+.controller('RegisterController', function RegisterController ($scope, $location, myConfig, UserManagementFactory, FlashService) {
       'use strict';
             $scope.dataLoading = false;
             $scope.searchText = '';
@@ -11,7 +11,7 @@ angular.module('HigherOrderApp')
                 $scope.dataLoading = true;
                 console.log('going to save...');
                 var user = $scope.data;
-                UserManagementFactory.createUser('3',user)
+                UserManagementFactory.createUser(myConfig.url + ':' + myConfig.port,user)
                 .then(function (response) {
                       if (response.success) {
                          $scope.dataLoading = false;
